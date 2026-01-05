@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #e9e4f8;
+  overflow-x: hidden;
+}
+
+.menubar {
+  background: rgba(255, 255, 255, 0.502);
+  backdrop-filter: blur(10px);
+}
+/* .page1 */
+
+.bebas {
+  font-family: Bebas Neue;
+}
+
+/* swiper slider */
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+.rightdec,
+.leftdec {
+  color: white;
+  height: 20px;
+}
+.swiper-pagination-bullet {
+  color: white;
+  background: white;
+}
+
+.swiper-slide {
+  /* width: 200px;
+  height: 300px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: white; */
+}
+.testcard {
+  width: 400px;
+  height: 200px;
+  background: white;
+  border-radius: 8px;
+  color: black;
+  padding: 20px;
+}

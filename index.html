@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learnify</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./learnify.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header
+      class="w-full flex overflow-X-hidden mb-4 justify-evenly items-center p-4 px-8"
+    >
+      <h1 class="font-bold text-xl cursor-pointer md:text-2xl mx-2">
+        Learnify
+      </h1>
+      <nav class="hidden md:flex justify-between gap-2 md:gap-6 mx-10">
+        <h2 class="cursor-pointer">Courses</h2>
+        <h2 class="cursor-pointer">Teachers</h2>
+        <h2 class="cursor-pointer">Offers</h2>
+        <h2 class="cursor-pointer">Contact</h2>
+      </nav>
+
+      <div id="buttons" class="flex gap-4">
+        <button
+          class="hover:scale-100 hover:shadow-lg cursor-pointer border-pink-300 border-2 rounded-md px-2 py-1 md:px-4 md:py-2"
+        >
+          Sign in
+        </button>
+        <button
+          class="hover:scale-100 hover:shadow-lg cursor-pointer bg-gradient-to-r from-pink-300 to-violet-300 rounded-md text-white md:font-bold mr-2 px-2 py-1 md:px-4"
+        >
+          Free Trail
+        </button>
+      </div>
+
+      <i class="ri-menu-3-fill menubutton text-3xl md:hidden"></i>
+    </header>
+    <main class="w-full">
+      <div
+        id="menubar"
+        class="menubar z-10 md:hidden right-[-100%] top-0 h-[110vh] w-[60%] fixed"
+      >
+        <ul class="py-32 flex flex-col gap-4 px-12">
+          <li class="text-2xl font-semibold cursor-pointer">Courses</li>
+          <li class="text-2xl font-semibold cursor-pointer">Teachers</li>
+          <li class="text-2xl font-semibold cursor-pointer">Offers</li>
+          <li class="text-2xl font-semibold cursor-pointer">Contact</li>
+          <i
+            class="ri-close-line absolute font-bold text-3xl top-8 right-10"
+          ></i>
+        </ul>
+      </div>
+      <div
+        id="Hero"
+        class="w-full h-[86vh] flex flex-col xl:px-32 lg:flex-row items-center justify-between bg-[#E9E4F8] px-12"
+      >
+        <div class="max-w-xl flex flex-col gap-3 md:gap-6">
+          <h1
+            id="heroContent"
+            class="font-bold text-3xl md:text-4xl lg:text-6xl text-[#312446]"
+          >
+            Develop your skills in a new and unique way
+          </h1>
+          <p id="heroContent" class="text-gray-600">
+            Explore a transformative approach to skill development on our online
+            learning platform. Discover a new realm of learning and elevate your
+            expertise in unique ways.
+          </p>
+          <div id="heroContent" class="flex gap-4 items-center">
+            <button
+              class="hover:scale-100 hover:shadow-lg bg-gradient-to-r from-pink-300 to-violet-300 text-white rounded-md px-5 py-2"
+            >
+              Enroll now
+            </button>
+            <h4 class="cursor-pointer font-medium underline mx-2">
+              What's Learnify?
+            </h4>
+          </div>
+        </div>
+
+        <div
+          class="xl:w-[590px] xl:h-[590px] w-[330px] h-[330px] overflow-hidden"
+        >
+          <img
+            id="heroimg"
+            class="object-cover w-full h-full"
+            src="./images/Gemini_Generated_Image_nra2uonra2uonra2.png"
+            alt="Hero Image"
+          />
+        </div>
+        <div>
+          <div
+            id="banner"
+            class="flex absolute opacity-0 overflow-x-hidden text-white bg-[linear-gradient(135deg,#FCA6D7,#C6B3FF)] left-0 bottom-0 w-full flex items-center px-8"
+          >
+            <div
+              class="grp mx-32 flex items-center justify-center gap-32 h-16 translate-x-0"
+            >
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-facebook-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-youtube-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-play-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-instagram-fill"></i>
+              </div>
+            </div>
+            <div
+              class="grp flex items-center justify-center gap-32 h-16 translate-x-0"
+            >
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-facebook-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-youtube-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-play-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-instagram-fill"></i>
+              </div>
+            </div>
+            <div
+              class="grp mx-32 flex items-center justify-center gap-32 h-16 translate-x-0"
+            >
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-facebook-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-youtube-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-play-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-instagram-fill"></i>
+              </div>
+            </div>
+            <div
+              class="grp flex items-center justify-center gap-32 h-16 translate-x-0"
+            >
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-facebook-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-youtube-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-play-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-instagram-fill"></i>
+              </div>
+            </div>
+            <div
+              class="grp mx-32 flex items-center justify-center gap-32 h-16 translate-x-0"
+            >
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-facebook-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-youtube-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-play-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-google-fill"></i>
+              </div>
+              <div id="movingbanner" class="text-[40px] shrink-0">
+                <i class="ri-instagram-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="page1"
+        class="w-full h-screen flex flex-col items-center p-8 md:p-14 bg-[#F7F2FA]"
+      >
+        <h1
+          class="search-courses text-2xl font-bold m-2 mt-0 lg:text-3xl lg:m-3"
+        >
+          Search Courses
+        </h1>
+        <div class="Search flex">
+          <div
+            class="searchIcon flex pl-3 rounded-tl-lg rounded-bl-lg justify-center items-center bg-white"
+          >
+            <i class="ri-search-line text-xl text-gray-500"></i>
+          </div>
+          <input
+            class="p-3 bg-white outline-none md:w-[300px] rounded-tr-lg rounded-br-lg placeholder:text-md"
+            type="text"
+            placeholder="Search for over 50+ courses"
+            name=""
+            id=""
+          />
+          <button
+            class="mx-2 md:mx-4 hover:scale-100 hover:shadow-lg cursor-pointer bg-gradient-to-r from-pink-300 to-violet-300 rounded-md text-white md:font-bold mr-2 px-2 py-1 md:px-4"
+          >
+            Search
+          </button>
+        </div>
+        <div
+          class="w-full lg:gap-24 md:my-8 md:flex justify-center items-center"
+        >
+          <div class="img-container flex justify-evenly items-center">
+            <img
+              class="object-cover w-[200px] md:w-[400px] lg:w-[450px]"
+              src="./images/Gemini_Generated_Image_5pocnx5pocnx5poc.png"
+              alt=""
+            />
+          </div>
+          <div class="container max-w-[400px]">
+            <h2
+              class="container-heading my-1 leading-snug text-[20px] md:text-2xl lg:text-4xl font-extrabold"
+            >
+              <span class="text-[#B672FD]">Benefits</span> From Our Online
+              learning
+            </h2>
+            <div class="flex flex-col gap-3 my-2">
+              <div class="text-content flex justify-center items-center gap-4">
+                <div
+                  class="icon bg-[#B672FF] lg:p-2 lg:px-3 p-1 px-2 rounded-full"
+                >
+                  <i class="ri-graduation-cap-line text-2xl"></i>
+                </div>
+                <div>
+                  <h2 class="text-bold text-md lg:text-lg">Online Degrees</h2>
+                  <p
+                    class="text-gray-500 text-[10px] lg:text-[14px] leading-tight"
+                  >
+                    Earn accredited degrees from the comfort of your
+                    home,opening doors to a world of possibilities
+                  </p>
+                </div>
+              </div>
+              <div class="text-content flex justify-center items-center gap-4">
+                <div
+                  class="icon bg-[#FF8DA6] lg:p-2 lg:px-3 p-1 px-2 rounded-full"
+                >
+                  <i class="ri-book-line text-2xl"></i>
+                </div>
+                <div>
+                  <h2 class="text-bold text-md lg:text-lg">Online Degrees</h2>
+                  <p
+                    class="text-gray-500 text-[10px] lg:text-[14px] leading-tight"
+                  >
+                    Enhance your skills with our concise and focused short
+                    courses, designed for quaick and effective learing
+                  </p>
+                </div>
+              </div>
+              <div class="text-content flex justify-center items-center gap-4">
+                <div
+                  class="icon bg-[#B672FF] lg:p-2 lg:px-3 p-1 px-2 rounded-full"
+                >
+                  <i class="ri-user-fill text-2xl"></i>
+                </div>
+                <div>
+                  <h2 class="text-bold text-md lg:text-lg">Online Degrees</h2>
+                  <p
+                    class="text-gray-500 text-[10px] lg:text-[14px] leading-tight"
+                  >
+                    Immerse yourself in knowlage with industry experts guiding
+                    you through hands on experience
+                  </p>
+                </div>
+              </div>
+              <div class="text-content flex justify-center items-center gap-4">
+                <div
+                  class="icon bg-[#FF8DA6] lg:p-2 lg:px-3 p-1 px-2 rounded-full"
+                >
+                  <i class="ri-play-mini-line text-2xl"></i>
+                </div>
+                <div>
+                  <h2 class="text-bold text-md lg:text-lg">Online Degrees</h2>
+                  <p
+                    class="text-gray-500 text-[10px] lg:text-[14px] leading-tight"
+                  >
+                    Dive into a vast library of over 1.5k video courses covering
+                    may subjects, offering a visual learing experience
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="page2"
+        class="text-white w-full flex flex-col gap-8 p-12 h-full items-center text-center justify-center bg-[linear-gradient(135deg,#B672FD,#FF8DA6)]"
+      >
+        <h1 class="page2heading text-3xl font-bold">Our Popular Courses</h1>
+        <p class="page2text">
+          Discover our most sought-after courses , carefully curated to meet the
+          demands of today's learners. Dive into engaging content crafted for
+          success in every step of your educational journey.
+        </p>
+        <div class="w-full flex flex-wrap justify-evenly items-center">
+          <div
+            class="card z-9 overflow-hidden min-w-[250px] md:w-[300px] m-4 text-black bg-white p-4 rounded-lg"
+          >
+            <img
+              class="img1 w-[270px] rounded-lg"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D"
+              alt=""
+            />
+            <div class="flex py-3 justify-between">
+              <h3 class="bg-[#eed4fc] px-2 rounded-md">Web design</h3>
+              <div
+                class="flex justify-center items-center bg-[#dfa7f9] p-1 rounded-md"
+              >
+                <i class="ri-star-fill text-yellow-500"></i>
+                <p>4.9</p>
+              </div>
+            </div>
+            <h1
+              class="z-10 cardheader text-xl my-3 w-[150px] font-bold font-semibold"
+            >
+              Web Design & Development
+            </h1>
+            <div class="flex justify-between">
+              <div class="flex gap-1 justify-center items-center text-center">
+                <i class="ri-book-open-line text-violet-500"></i>
+                <h3>25 classes</h3>
+              </div>
+              <div class="flex gap-1 justify-center items-center text-center">
+                <i class="ri-user-line text-violet-500"></i>
+                <h3>185 Students</h3>
+              </div>
+            </div>
+            <div class="m-2 w-full border-gray-500 border-1"></div>
+            <div class="flex justify-between">
+              <h2 class="font-bold">$560.00</h2>
+              <div class="flex">
+                <div class="w-6 h-6 rounded-full flex">
+                  <img
+                    src="./images/Gemini_Generated_Image_5pocnx5pocnx5poc.png"
+                    alt=""
+                  />
+                </div>
+                <h2 class="text-purple-300 px-1">J.Margan</h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card z-9 overflow-hidden min-w-[250px] md:w-[300px] m-4 text-black bg-white p-4 rounded-lg"
+          >
+            <img
+              class="img1 w-[270px] rounded-lg"
+              src="https://plus.unsplash.com/premium_photo-1661331911412-330f2e99cf53?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fGNvbXB1dGVyfGVufDB8fDB8fHww"
+              alt=""
+            />
+            <div class="flex py-3 justify-between">
+              <h3 class="bg-[#eed4fc] px-2 rounded-md">UI/UX design</h3>
+              <div
+                class="flex justify-center items-center bg-[#dfa7f9] p-1 rounded-md"
+              >
+                <i class="ri-star-fill text-yellow-500"></i>
+                <p>5.0</p>
+              </div>
+            </div>
+            <h1
+              class="z-10 cardheader text-xl my-3 w-[150px] font-bold font-semibold"
+            >
+              Wireframing & Prototyping
+            </h1>
+            <div class="flex justify-between">
+              <div class="flex gap-1 justify-center items-center text-center">
+                <i class="ri-book-open-line text-violet-500"></i>
+                <h3>8 classes</h3>
+              </div>
+              <div class="flex gap-1 justify-center items-center text-center">
+                <i class="ri-user-line text-violet-500"></i>
+                <h3>400 Students</h3>
+              </div>
+            </div>
+            <div class="m-2 w-full border-gray-500 border-1"></div>
+            <div class="flex justify-between">
+              <h2 class="font-bold">$160.00</h2>
+              <div class="flex">
+                <div class="w-6 h-6 rounded-full flex">
+                  <img
+                    src="./images/Gemini_Generated_Image_5pocnx5pocnx5poc.png"
+                    alt=""
+                  />
+                </div>
+                <h2 class="text-purple-300 px-1">Jordan Re</h2>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card z-9 overflow-hidden min-w-[250px] md:w-[300px] m-4 text-black bg-white p-4 rounded-lg"
+          >
+            <img
+              class="img1 w-[270px] rounded-lg"
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvbXB1dGVyfGVufDB8fDB8fHww"
+              alt=""
+            />
+            <div class="flex py-3 justify-between">
+              <h3 class="bg-[#eed4fc] px-2 rounded-md">Data science</h3>
+              <div
+                class="flex justify-center items-center bg-[#dfa7f9] p-1 rounded-md"
+              >
+                <i class="ri-star-fill text-yellow-500"></i>
+                <p>4.9</p>
+              </div>
+            </div>
+            <h1
+              class="z-10 cardheader text-xl my-3 w-[150px] font-bold font-semibold"
+            >
+              Python For data Science
+            </h1>
+            <div class="flex justify-between">
+              <div class="flex gap-1 justify-center items-center text-center">
+                <i class="ri-book-open-line text-violet-500"></i>
+                <h3>18 classes</h3>
+              </div>
+              <div class="flex gap-1 justify-center items-center text-center">
+                <i class="ri-user-line text-violet-500"></i>
+                <h3>160 Students</h3>
+              </div>
+            </div>
+            <div class="m-2 w-full border-gray-500 border-1"></div>
+            <div class="flex justify-between">
+              <h2 class="font-bold">$432.00</h2>
+              <div class="flex">
+                <div class="w-6 h-6 rounded-full flex">
+                  <img
+                    src="./images/Gemini_Generated_Image_5pocnx5pocnx5poc.png"
+                    alt=""
+                  />
+                </div>
+                <h2 class="text-purple-300 px-1">Alex Taylor</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="page3"
+        class="p-10 lg:px-40 bg-[#F5EFF9] md:flex w-full h-full justify-evenly items-left"
+      >
+        <div
+          class="flex flex-col max-w-[600px] justify-evenly text-center items-center md:text-left md:items-start"
+        >
+          <h1 class="page3text text-3xl font-bold py-4 md:py-2">
+            If Your Are a Certified Teacher Then
+            <span class="text-violet-600">Become An Instructor</span>
+          </h1>
+          <p class="page3text py-4 md:py-2 text-gray-500">
+            unlock the opportunity to inspire and educate by joining our team of
+            Instructors. If yor're a certified teacher, elevate your impact and
+            share your expertise with learners worldwide.
+          </p>
+          <h1 class="page3text text-2xl font-bold">Enjoy Many Perks</h1>
+          <div class="flex text-left">
+            <ul class="p-4 list-disc marker:text-violet-600">
+              <li>Global impact</li>
+              <li>flexible Schedule</li>
+              <li>Innovative Teaching Tools</li>
+              <li>Recognition and Reputaion</li>
+            </ul>
+            <ul class="p-4 list-disc marker:text-violet-600">
+              <li>Global impact</li>
+              <li>flexible Schedule</li>
+              <li>Innovative Teaching Tools</li>
+              <li>Recognition and Reputaion</li>
+            </ul>
+          </div>
+          <button
+            class="my-4 py-2 w-1/2 hover:scale-100 hover:shadow-lg cursor-pointer bg-[linear-gradient(135deg,#B672FD,#FF8DA6)] rounded-md text-white md:font-bold mr-2 px-2 py-1 md:px-4"
+          >
+            Become an Instructor
+          </button>
+        </div>
+        <div class="max-w-[500px]">
+          <img
+            src="./images/Gemini_Generated_Image_aju0txaju0txaju0.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div
+        id="page4"
+        class="relative text-white w-full flex flex-col gap-8 p-12 h-full items-center text-center justify-center bg-[linear-gradient(135deg,#B672FD,#FF8DA6)]"
+      >
+        <h1 class="page2heading text-3xl font-bold">Student's Testimonials</h1>
+        <p class="page2text">
+          Here's what our students have to say about thier transformative
+          learing experience,real stories, real growth. discover firsthand the
+          impact our courses have had on their lives.
+        </p>
+
+        <div class="Testimonials mb-24">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="testcard">
+                  <div class="flex">
+                    <div
+                      class="w-[50px] mx-4 h-[50px] flex items-center justify-center overflow-hidden border-[#b672ff] border-2 rounded-full"
+                    >
+                      <img
+                        class="w-full"
+                        src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+                        alt=""
+                      />
+                    </div>
+                    <div class="text-left">
+                      <h1 class="2xl font-bold text-[#b672ff]">
+                        Alexa Rodrigez
+                      </h1>
+                      <span class="underline">Web Developer</span>
+                    </div>
+                  </div>
+                  <p class="text-left text-[15px] mt-4">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ipsam vel velit reprehenderit maxime. Recusandae placeat cum
+                    sapiente omnis consectetur, reiciendis, itaque vitae
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testcard">
+                  <div class="flex">
+                    <div
+                      class="w-[50px] mx-4 h-[50px] flex items-center justify-center overflow-hidden border-[#b672ff] border-2 rounded-full"
+                    >
+                      <img
+                        class="w-full"
+                        src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+                        alt=""
+                      />
+                    </div>
+                    <div class="text-left">
+                      <h1 class="2xl font-bold text-[#b672ff]">John Sina</h1>
+                      <span class="underline">Graphic Designer</span>
+                    </div>
+                  </div>
+                  <p class="text-left text-[15px] mt-4">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ipsam vel velit reprehenderit maxime. Recusandae placeat cum
+                    sapiente omnis consectetur, reiciendis, itaque vitae
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testcard">
+                  <div class="flex">
+                    <div
+                      class="w-[50px] mx-4 h-[50px] flex items-center justify-center overflow-hidden border-[#b672ff] border-2 rounded-full"
+                    >
+                      <img
+                        class="w-full"
+                        src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+                        alt=""
+                      />
+                    </div>
+                    <div class="text-left">
+                      <h1 class="2xl font-bold text-[#b672ff]">Sunil sharma</h1>
+                      <span class="underline">Video Editor</span>
+                    </div>
+                  </div>
+                  <p class="text-left text-[15px] mt-4">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ipsam vel velit reprehenderit maxime. Recusandae placeat cum
+                    sapiente omnis consectetur, reiciendis, itaque vitae
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testcard">
+                  <div class="flex">
+                    <div
+                      class="w-[50px] mx-4 h-[50px] flex items-center justify-center overflow-hidden border-[#b672ff] border-2 rounded-full"
+                    >
+                      <img
+                        class="w-full"
+                        src="https://images.unsplash.com/photo-1701615004837-40d8573b6652?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+                        alt=""
+                      />
+                    </div>
+                    <div class="text-left">
+                      <h1 class="2xl font-bold text-[#b672ff]">Emily senta</h1>
+                      <span class="underline">Python Developer</span>
+                    </div>
+                  </div>
+                  <p class="text-left text-[15px] mt-4">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ipsam vel velit reprehenderit maxime. Recusandae placeat cum
+                    sapiente omnis consectetur, reiciendis, itaque vitae
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev leftdec"></div>
+            <div class="swiper-button-next rightdec"></div>
+          </div>
+        </div>
+        <div
+          class="absolute left-0 bottom-[-20%] sm:bottom-[-25%] lg:bottom-[-30%] w-full bg-white py-12 rounded-tl-[80px] rounded-br-[80px] flex justify-center"
+        >
+          <div
+            class="extrapage text-white w-[400px] md:w-[500px] flex flex-col p-6 rounded-lg items-center text-center justify-center bg-[linear-gradient(135deg,#B672FD,#FF8DA6)]"
+          >
+            <h1 class="extrapagetext text-3xl font-bold">Get in Touch!</h1>
+            <p class="extrapagetext">
+              Subscribe Us to get in touch to enjoy discounts, promos and much
+              more!
+            </p>
+            <div class="flex w-full items-center justify-evenly m-3">
+              <input
+                class="extrapagetext placeholder:text-lg text-black text-xl mx-2 w-full bg-white placeholder:text-gray-500 p-2 rounded-lg outline-none shadow-lg"
+                type="email"
+                placeholder="Enter your email.."
+                name=""
+                id=""
+              />
+              <button
+                class="extrapagetext hover:scale-[1.05] text-bold mx-2 text-xl text-[#B672FD] py-2 px-4 shadow-lg rounded-lg bg-white"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="page5"
+        class="text-white w-full flex flex-col md:flex-row h-full items-center text-center justify-center bg-[linear-gradient(135deg,#FF8DA6,#B672FD)]"
+      >
+        <footer class="w-full justify-evenly mt-40 text-gray-600 body-font">
+          <div
+            class="footerleft w-full justify-evenly px-18 py-24 flex md:items-center lg:items-start md:flex-row flex-wrap flex-col"
+          >
+            <div
+              class="w-64 flex-shrink-0 md:mx-6 mx-auto text-center md:text-left"
+            >
+              <span class="text-2xl text-white font-bold">Learnify</span>
+              <p class="footerleft mt-2 text-sm text-gray-500">
+                Explore a transformative approach to skill development on our
+                online learing platform.
+              </p>
+            </div>
+            <div
+              class="footeright flex flex-col md:flex-row md:mt-0 mt-10 md:text-left text-center"
+            >
+              <div class="w-full px-4">
+                <h2
+                  class="catagories title-font text-white font-medium text-gray-900 tracking-widest text-sm mb-3"
+                >
+                  CATEGORIES
+                </h2>
+                <nav class="list-none mb-10">
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800 cursor-pointer"
+                      >First Link</a
+                    >
+                  </li>
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                  </li>
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                  </li>
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4">
+                <h2
+                  class="catagories title-font text-white font-medium text-gray-900 tracking-widest text-sm mb-3"
+                >
+                  CATEGORIES
+                </h2>
+                <nav class="list-none mb-10">
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800 cursor-pointer"
+                      >First Link</a
+                    >
+                  </li>
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                  </li>
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                  </li>
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                  </li>
+                </nav>
+              </div>
+              <div class="w-full px-4">
+                <h2
+                  class="catagories title-font text-white font-medium text-gray-900 tracking-widest text-sm mb-3"
+                >
+                  CATEGORIES
+                </h2>
+                <nav class="list-none mb-10">
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800 cursor-pointer"
+                      >First Link</a
+                    >
+                  </li>
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                  </li>
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                  </li>
+                  <li>
+                    <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                  </li>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-100">
+            <div
+              class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+            >
+              <p class="text-gray-500 text-sm text-center sm:text-left">
+                © 2026 Learnify. All rights reserved
+                <a
+                  href=""
+                  rel="noopener noreferrer"
+                  class="text-gray-600 ml-1"
+                  target="_blank"
+                  >@Learnify</a
+                >
+              </p>
+              <span
+                class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
+              >
+                <a class="text-gray-500">
+                  <svg
+                    fill="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                  <svg
+                    fill="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      width="20"
+                      height="20"
+                      x="2"
+                      y="2"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                    ></path>
+                  </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                  <svg
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="0"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="none"
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                    ></path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./Learnify.js"></script>
+  </body>
+</html>
