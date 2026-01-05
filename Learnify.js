@@ -207,6 +207,18 @@ animetl.from("#page3 img", {
 });
 
 // page4;
+animetl.from(".page4heading", {
+  opacity: 0,
+  y: 50,
+  duration: 0.7,
+  ease: "power3.out",
+});
+animetl.from(".page4text", {
+  opacity: 0,
+  y: 50,
+  duration: 0.7,
+  ease: "power3.out",
+});
 
 //slider
 const swiper = new Swiper(".swiper", {
@@ -273,3 +285,4 @@ animetl.from("footer nav a", {
   stagger: 0.2,
   ease: "power2.out",
 });
+
